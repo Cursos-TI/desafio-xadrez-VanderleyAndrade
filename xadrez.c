@@ -8,7 +8,7 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
     int main() {
-        int torre = 1,bispo = 1,rainha =1;
+        int torre = 1,bispo = 1,rainha =1,cavalo=1;
         printf("Movimento da rainha \n");
         //Código para simular movimento da rainha utilizando do while
     do
@@ -34,6 +34,15 @@
     for ( torre = 1; torre <= 5; torre++)
     {
         printf("Direita \n");
+    }
+    printf("Movimento do cavalo \n");
+    while (cavalo --)
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            printf("Baixo \n");
+        }
+        printf("esquerda \n");
     }
     
 
