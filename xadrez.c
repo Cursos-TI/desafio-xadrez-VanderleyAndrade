@@ -1,49 +1,62 @@
+#include <stdio.h>
 
 
-    #include <stdio.h>
 
+void movertorre(int casas){
+   // Imprimi mensagem inicia movimento torre 
     
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
-
-    int main() {
-        int torre = 1,bispo = 1,rainha =1,cavalo=1;
-        printf("Movimento da rainha \n");
-        //Código para simular movimento da rainha utilizando do while
-    do
-    {
-      printf("esquerda \n");
-    rainha++;
-    } while (rainha <=8);
+    if(casas > 0){ 
     
-     printf("Movimento do Bispo \n");
-     
-    //Código para simular movimento do bispo utilizando while
-     while (bispo <=5)
-     {
-    
-        printf("Cima_Direita \n");
-    bispo++;
-    
-    
-    }
-    //Código para simular movimento da torre utilizando for
-    printf("Movimento da torre \n");
-    
-    for ( torre = 1; torre <= 5; torre++)
-    {
         printf("Direita \n");
+        movertorre(casas -1);
+}
+
+
+}
+
+void moverbispo(int casas){
+   
+   
+    if(casas >0){
+        printf("Diagonal Direita Cima \n");
+        moverbispo(casas -1);
     }
-    printf("Movimento do cavalo \n");
-    while (cavalo --)
-    {
-        for (int i = 0; i < 2; i++)
-        {
-            printf("Baixo \n");
-        }
-        printf("esquerda \n");
+
+}
+
+
+void moverrainha(int casas){
+    if(casas >0){
+        printf("Esquerda \n");
+        moverrainha(casas -1);
     }
+
+}
+
+int main(){
+printf("Inicia movimento da torre \n");
+movertorre (5);
+
+printf("Inicia movimento do bispo \n");
+moverbispo(5);
+
+printf("Inicia movimento da rainha \n");
+moverrainha(8);
+
+printf("Inicia movimento do cavalo \n");
+
+for (int i = 0; i < 2; i++)
+{
+    printf("Baixo \n");
+}
+printf("esquerda \n");
+
+
+return 0;
+
+
+
+}
     
 
 
@@ -73,5 +86,5 @@
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
 
-    return 0;
-}
+   
+
